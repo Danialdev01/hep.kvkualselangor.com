@@ -8,9 +8,18 @@ if (isset($_POST["Import"])) {
         $c = 0;
 
         while (($data = fgetcsv($handle, 1000, ",")) !== false) {
-
-            $query = mysqli_query($con, "INSERT INTO student (full_name, nokp, programme, year_s, edu, residence) 
-		VALUES ('" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[3] . "','" . $data[4] . "','" . $data[5] . "')");
+            echo $data[0];
+            echo "<br>";
+            echo $data[2];
+            echo "<br>";
+            echo $data[3];
+            echo "<br>";
+            echo $data[4];
+            echo "<br>";
+            echo $data[5];
+            echo "<br>";
+            echo "<br>";
+            $query = mysqli_query($con, "INSERT INTO student (id, full_name, nokp, programme, year_s, edu, residence) VALUES (NULL,'" . $data[0] . "','" . $data[1] . "','" . $data[2] . "','" . $data[3] . "','" . $data[4] . "','" . $data[5] . "')");
         }
 
         if ($query) {
