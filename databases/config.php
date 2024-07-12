@@ -1,6 +1,6 @@
 <?php
 
-$env = parse_ini_string(file_get_contents(__DIR__.'/.env'));
+$env = parse_ini_string(file_get_contents(__DIR__.'/.env_sample'));
 $SERVER = $env['HOSTNAME'];
 $USER = $env['USERNAME'];
 $PSWD = $env['PASSWORD'];

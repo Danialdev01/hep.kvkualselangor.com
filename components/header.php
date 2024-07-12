@@ -25,7 +25,7 @@
 
 <body>
     <div class="container text-center mt-3 bg-light">
-        <img src="../../images/kpmkvks.png" class="w-75">
+        <img src="./images/kpmkvks.png" class="w-75">
         <h3 class="h3 p-3">UNIT HAL EHWAL PELAJAR<br>KOLEJ VOKASIONAL KUALA SELANGOR</h3>
     </div>
 
