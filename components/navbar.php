@@ -19,16 +19,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link <?php if($page=='home'){echo" active";}?>" aria-current="page" href="../../dashboard.php">Halaman Utama</a>
+          <a class="nav-link <?php if($page=='home'){echo" active";}?>" aria-current="page" href="./dashboard.php">Halaman Utama</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?php if($page=='data'){echo" active";}?>" href="../../student-app.php">Data Pelajar</a>
+          <a class="nav-link <?php if($page=='data'){echo" active";}?>" href="../student-app.php">Data Pelajar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link <?php if($page=='config'){echo" active";}?>" href="../../components/config-semakDVM.php">Konfigurasi Sistem SemakDVM</a>
+          <a class="nav-link <?php if($page=='config'){echo" active";}?>" href="./components/config-semakDVM.php">Konfigurasi Sistem SemakDVM</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../../logout.php">Log Keluar</a>
+          <a class="nav-link" href="./logout.php">Log Keluar</a>
         </li> 
       </ul>
     </div>

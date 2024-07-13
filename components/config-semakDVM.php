@@ -18,7 +18,7 @@ $msg = "";
 if (isset($_POST['update'])) {
 
     $title = mysqli_real_escape_string($con, $_POST['title']);
-
+    $date_issued = $_POST['date_issued'];
     // -- asrama --
     //report date
     $reportD_a = $_POST['reportD-a'];
@@ -46,6 +46,7 @@ if (isset($_POST['update'])) {
 
     $setDocs = "UPDATE document SET 
     title='$title',
+    date_issued='$date_issued',
     reportD_asrama='$reportD_a',
     reportP_asrama='$reportP_a',
     reportT_asrama='$reportT_a',
@@ -130,7 +131,7 @@ $currentDoc = mysqli_fetch_array($currentDocSet);
 <body>
     <?php $page="config"; require_once('navbar.php'); ?>
         <div class="container text-center mt-3 bg-light">
-        <img src="../../images/kpmkvks.png" class="w-75">
+        <img src="../images/kpmkvks.png" class="w-75">
         <h3 class="h3 p-3">UNIT HAL EHWAL PELAJAR<br>KOLEJ VOKASIONAL KUALA SELANGOR</h3>
     </div>
 
@@ -140,14 +141,13 @@ $currentDoc = mysqli_fetch_array($currentDocSet);
         <div class="container">
 
             <?php echo $msg; ?>
-
             <div class="row">
 
                 <div class="col-sm">
 
                     <div class="mb-3">
 
-                        <label for="exampleInputPassword1" class="form-label"><strong>Tajuk Surat</strong></label>
+                        <label for="exampleInputPassword1" class="form-label"><strong>Diploma Sesi / Kohort</strong></label>
 
                         <input type="text" class="form-control" id="exampleInputPassword1" name="title" required value="<?php echo $currentDoc['title']; ?>">
 
@@ -155,8 +155,20 @@ $currentDoc = mysqli_fetch_array($currentDocSet);
 
                 </div>
 
-            </div>
+                <div class="col-sm">
 
+                    <div class="mb-3">
+
+                        <label for="exampleInputPassword1" class="form-label"><strong>Tarikh Surat Rasmi</strong></label>
+
+                        <input type="date" class="form-control" id="exampleInputPassword1" name="date_issued" required value="<?php echo $currentDoc['date_issued']; ?>">
+
+                    </div>
+
+                </div>
+
+            </div>
+             <hr>
             <div class="row">
 
                 <div class="col-sm">
@@ -208,7 +220,7 @@ $currentDoc = mysqli_fetch_array($currentDocSet);
                 
             </div>
             
-            <div style="width:100%;background-color:#0B5ED7;height:2px"></div><br>
+            <hr>
             
             <div class="row">
 
