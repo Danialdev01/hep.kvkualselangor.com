@@ -147,7 +147,7 @@ $currentDoc = mysqli_fetch_array($currentDocSet);
 
                     <div class="mb-3">
 
-                        <label for="exampleInputPassword1" class="form-label"><strong>Tajuk Surat</strong></label>
+                        <label for="exampleInputPassword1" class="form-label"><strong>Diploma Sesi / Kohort</strong></label>
 
                         <input type="text" class="form-control" id="exampleInputPassword1" name="title" required value="<?php echo $currentDoc['title']; ?>">
 
