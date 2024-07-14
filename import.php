@@ -19,7 +19,8 @@ if (isset($_POST["Import"])) {
             // echo $data[5];
             // echo "<br>";
             // echo "<br>";
-            $query = mysqli_query($con, "INSERT INTO student (`id`, `full_name`, `nokp`, `programme`, `year_s`, `edu`, `residence`) VALUES (NULL, '$data[0]', '$data[1]', '$data[2]', '$data[3]', '$data[4]', '$data[5]')");
+            $full_name = mysqli_real_escape_string($con,$data[0]);
+            $query = mysqli_query($con, "INSERT INTO student (`id`, `full_name`, `nokp`, `programme`, `year_s`, `edu`, `residence`) VALUES (NULL, '$full_name', '$data[1]', '$data[2]', '$data[3]', '$data[4]', '$data[5]')");
         }
 
         if ($query) {
