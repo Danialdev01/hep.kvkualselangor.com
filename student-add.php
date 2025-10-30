@@ -69,7 +69,7 @@ if (isset($_POST['reg'])) {
 <body>
     <?php require_once('components/navbar.php'); ?>
     <div class="container text-center mt-3 bg-light">
-        <img src="../../images/kpmkvks.png" class="w-75">
+        <img src="./images/kpmkvks.png" class="w-75">
         <h3 class="h3 p-3">Tambah Rekod Pelajar Diploma</h3>
     </div>
 
